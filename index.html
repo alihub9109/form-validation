@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="form-container">
+    <form id="registrationForm" action="#" method="POST" novalidate>
+      <h2>Registration Form</h2>
+
+      <!-- GOOD -->
+<div class="form-group">
+  <label for="fullName">Full Name</label>
+  <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+  <span id="fullNameError" class="error-message"></span>
+</div>
+
+<!-- FIXED -->
+<div class="form-group">
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" placeholder="example@email.com" required>
+  <span id="emailError" class="error-message"></span> <!-- ✅ Correct ID -->
+</div>
+
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <div id="strengthBar">
+          <div id="strengthIndicator"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div id="confirmMessage"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label class="custom-radio"><input type="radio" name="gender" value="male" required><span>Male</span></label>
+          <label class="custom-radio"><input type="radio" name="gender" value="female"><span>Female</span></label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Hobbies</label>
+        <div class="checkbox-group">
+          <label class="custom-checkbox"><input type="checkbox" name="hobbies" value="reading"><span>Reading</span></label>
+          <label class="custom-checkbox"><input type="checkbox" name="hobbies" value="traveling"><span>Traveling</span></label>
+          <label class="custom-checkbox"><input type="checkbox" name="hobbies" value="coding"><span>Coding</span></label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">Select Country</option>
+          <option value="usa">United States</option>
+          <option value="canada">Canada</option>
+          <option value="uk">United Kingdom</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
