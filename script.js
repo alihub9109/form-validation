@@ -291,6 +291,7 @@ form.addEventListener("submit", function (e) {
     
     // ===== Final Submission Handler =====
     form.addEventListener("submit", function (e) {
+        e.preventDefault();
       let hasError = false;
     
       if (!isValidName(nameInput.value.trim())) {
